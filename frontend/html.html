@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare Platform</title>
+    <link rel="stylesheet" href="ft.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+      </div>
+
+      <header>
+        <div class="container">
+          <nav class="navbar">
+            <div class="logo">
+              <i class="fas fa-heartbeat"></i>
+              <span>Medi Predict</span>
+            </div>
+            <div class="nav-links">
+              <a href="#" class="active">Home</a>
+              <a href="#given-features">Services</a>
+              <a href="#testimonials">Testimonials</a>
+              <a href="#our-contact">Contact</a>
+            </div>
+          </nav>
+          <div class="hero">
+            <div class="hero-content">
+              <h1>Health Care <span class="gradient-text">Assistant</span></h1>
+              <p>Advanced symptom analysis and health insights powered by Machine Learning. Identify your disease in seconds.</p>
+              <a href="#symptom-checker" class="btn btn-hero">
+                <span>Try Symptom Checker</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero-image">
+              <div class="image-wrapper">
+                <img src="img.jpg" alt="AI Health Image" class="ai-image">
+                <div class="image-decoration"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="features" id="given-features">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Our Features</span>
+            <h2>How our App Helps Your Health</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Smart Analysis</h3>
+              <p>Our model analyzes symptoms using advanced machine learning algorithms.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Fast Results</h3>
+              <p>Get health insights in seconds, not days or weeks.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Private & Secure</h3>
+              <p>Your health data is encrypted and never shared with third parties.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Always Available</h3>
+              <p>Access your health insights anytime, anywhere, on any device.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="symptom-checker" class="input-form">
+        <div class="container">
+          <div class="form-container">
+            <div class="section-header">
+              <span class="section-tag">Disease diagnosis</span>
+              <h2>Disease Predictor</h2>
+              <p class="form-description">Select your symptoms below to get your health assessment</p>
+            </div>
+
+            <div class="form-card">
+              <div class="form-group">
+                <label for="symptom-select">
+                  <i class="fas fa-search"></i>
+                  Select symptoms:
+                </label>
+                <div class="select-wrapper">
+                  <select id="symptom-select" class="form-control">
+                    <!-- Options will be dynamically populated -->
+                  </select>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="btn btn-add" onclick="addSymptom()">
+                  <i class="fas fa-plus"></i>
+                  Add Symptom
+                </button>
+              </div>
+
+              <!-- Display selected symptoms -->
+              <div id="selected-symptoms">
+                <h3><i class="fas fa-list-ul"></i> Selected Symptoms:</h3>
+                <ul id="symptom-list"></ul>
+              </div>
+
+              <button class="btn btn-primary" onclick="checkSymptoms()">
+                <i class="fas fa-stethoscope"></i>
+                Analyze Symptoms
+              </button>
+
+              <!-- Area to display results -->
+              <div id="results" class="results-container">
+                <!-- Results will be displayed here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Testimonials</span>
+            <h2>What Our Users Say</h2>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>The symptom checker helped me identify a potential health issue before it became serious. Highly recommended!</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <span>Healthcare Professional</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>I was skeptical at first, but the AI analysis was surprisingly accurate and helped me discuss my symptoms more effectively with my doctor.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <span>Software Engineer</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>The interface is intuitive and the results are easy to understand. This tool has become part of my regular health monitoring.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="author-info">
+                  <h4>Emily Rodriguez</h4>
+                  <span>Teacher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container" id="our-contact">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Medi Predict</span>
+              </div>
+              <p>Advanced healthcare insights powered by Machine Learning Model.</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="footer-links">
+              <div class="footer-links-column">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Our Team</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+              </div>
+              <div class="footer-links-column">
+                <h4>Services</h4>
+                <a href="#">Symptom Checker</a>
+                <a href="#">Health Monitoring</a>
+                <a href="#">Medical Records</a>
+                <a href="#">Telemedicine</a>
+              </div>
+              <div class="footer-links-column">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">HIPAA Compliance</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Healthcare Platform. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Unique symptoms from Testing.csv
+      const symptoms = [
+              "itching", "skin rash", "nodal skin eruptions", "continuous sneezing",
+      "shivering", "chills", "joint pain", "stomach pain", "acidity",
+      "ulcers on tongue", "muscle wasting", "vomiting", "burning micturition",
+      "spotting urination", "fatigue", "weight gain", "anxiety",
+      "cold hands and feets", "mood swings", "weight loss", "restlessness",
+      "lethargy", "patches in throat", "irregular sugar level", "cough",
+      "high fever", "sunken eyes", "breathlessness", "sweating", "dehydration",
+      "indigestion", "headache", "yellowish skin", "dark urine", "nausea",
+      "loss of appetite", "pain behind the eyes", "back pain", "constipation",
+      "abdominal pain", "diarrhoea", "mild fever", "yellow urine",
+      "yellowing of eyes", "acute liver failure", "fluid overload",
+      "swelling of stomach", "swelled lymph nodes", "malaise",
+      "blurred and distorted vision", "phlegm", "throat irritation",
+      "redness of eyes", "sinus pressure", "runny nose", "congestion",
+      "chest pain", "weakness in limbs", "fast heart rate",
+      "pain during bowel movements", "pain in anal region", "bloody stool",
+      "irritation in anus", "neck pain", "dizziness", "cramps", "bruising",
+      "obesity", "swollen legs", "swollen blood vessels", "puffy face and eyes",
+      "enlarged thyroid", "brittle nails", "swollen extremeties",
+      "excessive hunger", "extra marital contacts", "drying and tingling lips",
+      "slurred speech", "knee pain", "hip joint pain", "muscle weakness",
+      "stiff neck", "swelling joints", "movement stiffness",
+      "spinning movements", "loss of balance", "unsteadiness",
+      "weakness of one body side", "loss of smell", "bladder discomfort",
+      "foul smell of urine", "continuous feel of urine", "passage of gases",
+      "internal itching", "toxic look (typhos)", "depression", "irritability",
+      "muscle pain", "altered sensorium", "red spots over body", "belly pain",
+      "abnormal menstruation", "dischromic patches", "watering from eyes",
+      "increased appetite", "polyuria", "family history", "mucoid sputum",
+      "rusty sputum", "lack of concentration", "visual disturbances",
+      "receiving blood transfusion", "receiving unsterile injections", "coma",
+      "stomach bleeding", "distention of abdomen", "history of alcohol consumption",
+      "blood in sputum", "prominent veins on calf", "palpitations",
+      "painful walking", "pus filled pimples", "blackheads", "scurring",
+      "skin peeling", "silver like dusting", "small dents in nails",
+      "inflammatory nails", "blister", "red sore around nose",
+      "yellow crust ooze"
+      ];
+
+      // Populate the dropdown
+      const symptomSelect = document.getElementById("symptom-select");
+      symptoms.forEach((symptom) => {
+        const option = document.createElement("option");
+        option.value = symptom;
+        option.textContent = symptom;
+        symptomSelect.appendChild(option);
+      });
+
+      // Add selected symptom to the list
+      function addSymptom() {
+        const selectedSymptom = symptomSelect.value;
+        const symptomList = document.getElementById("symptom-list");
+
+        // Check if symptom is already added
+        if ([...symptomList.children].some((li) => li.textContent.replace("×", "").trim() === selectedSymptom)) {
+          showNotification("Symptom already added!");
+          return;
+        }
+
+        const li = document.createElement("li");
+        li.className = "symptom-tag";
+        
+        const symptomText = document.createElement("span");
+        symptomText.textContent = selectedSymptom;
+        li.appendChild(symptomText);
+        
+        const removeBtn = document.createElement("button");
+        removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+        removeBtn.className = "remove-btn";
+        removeBtn.onclick = function() {
+          li.classList.add("removing");
+          setTimeout(() => {
+            symptomList.removeChild(li);
+          }, 300);
+        };
+        
+        li.appendChild(removeBtn);
+        symptomList.appendChild(li);
+        
+        // Add animation class
+        setTimeout(() => {
+          li.classList.add("show");
+        }, 10);
+      }
+
+      // Show notification
+      function showNotification(message) {
+        // Check if notification already exists
+        let notification = document.querySelector('.notification');
+        if (notification) {
+          notification.remove();
+        }
+        
+        notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.innerHTML = `
+          <div class="notification-content">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>${message}</span>
+          </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Show notification
+        setTimeout(() => {
+          notification.classList.add('show');
+        }, 10);
+        
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+          notification.classList.remove('show');
+          setTimeout(() => {
+            notification.remove();
+          }, 300);
+        }, 3000);
+      }
+
+      // Collect symptoms and send to backend
+      function checkSymptoms() {
+        const symptomList = document.getElementById("symptom-list");
+        const selectedSymptoms = [...symptomList.children].map((li) => li.querySelector("span").textContent.trim());
+
+        if (selectedSymptoms.length === 0) {
+          document.getElementById("results").innerHTML = `
+            <div class="error-message">
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Please select at least one symptom.</p>
+            </div>`;
+          return;
+        }
+
+        // API URL (replace with your actual API endpoint)
+        const apiUrl = "http://127.0.0.1:5000/users";
+
+        // Clear previous results
+        document.getElementById("results").innerHTML = `
+          <div class="loading">
+            <div class="spinner-container">
+              <div class="spinner"></div>
+            </div>
+            <p>Analyzing your symptoms...</p>
+          </div>`;
+
+        // Create the request body as JSON
+        const requestBody = {
+          symptoms: selectedSymptoms,
+        };
+
+        // Use fetch to make a POST request
+        fetch(apiUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody), // Convert the JavaScript object to JSON
+        })
+          .then((response) => response.json()) // Parse the response as JSON
+          .then((data) => {
+            // Handle the results and display them
+            let resultHtml = `
+              <div class="results-header">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Possible Conditions</h3>
+              </div>`;
+            
+            if (data && data.length > 0) {
+              resultHtml += `<ul class="conditions-list">`;
+              data.forEach((condition, index) => {
+                resultHtml += `
+                  <li class="condition-item">
+                    <div class="condition-number">${index + 1}</div>
+                    <div class="condition-info">
+                    <strong>${condition.disease}</strong>
+                    <p class="condition-probability">
+                                  ${Math.round(condition.probability)}% probability
+                                </p>
+                  </div>
+                  </li>`;
+              });
+              resultHtml += `</ul>`;
+              resultHtml += `
+                <div class="disclaimer">
+                  <i class="fas fa-info-circle"></i>
+                  <p>This is not a medical diagnosis. Please consult with a healthcare professional for proper medical advice.</p>
+                </div>`;
+            } else {
+              resultHtml += `
+                <div class="no-results">
+                  <i class="fas fa-search"></i>
+                  <p>No results found. Please try again with different symptoms.</p>
+                </div>`;
+            }
+            
+            // Add animation class for smooth transition
+            document.getElementById("results").innerHTML = resultHtml;
+            setTimeout(() => {
+              document.getElementById("results").classList.add("show-results");
+            }, 100);
+          })
+          .catch((error) => {
+            // Handle any errors
+            console.error("Error fetching symptoms data:", error);
+            document.getElementById("results").innerHTML = `
+              <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>An error occurred while analyzing your symptoms. Please try again later.</p>
+              </div>`;
+          });
+      }
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
