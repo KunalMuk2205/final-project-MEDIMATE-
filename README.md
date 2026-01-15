@@ -7,70 +7,57 @@ Here is a visual demonstration of the project -
 CLICK HERE -  https://youtu.be/1eKOlDx5W1g
 
 🌟 Key Features
+
 🔍 Disease Prediction
 
-Users select symptoms from a predefined list.
-
-The system predicts possible diseases with confidence percentages using a trained ML model.
+-> Users select symptoms from a predefined list.
+-> The system predicts possible diseases with confidence percentages using a trained ML model.
 
 ⚡ Fast & Interactive UI
 
-Smooth animations and modern UI/UX.
-
-Instant results with loading indicators.
+-> Smooth animations and modern UI/UX.
+-> Instant results with loading indicators.
 
 🧠 Machine Learning Powered
 
-Symptom–disease mapping based on medical datasets.
-
-Probabilistic predictions instead of single rigid outputs.
+-> Symptom–disease mapping based on medical datasets.
+-> Probabilistic predictions instead of single rigid outputs.
 
 🔐 Privacy Focused
 
-No personal data storage.
-
-Works entirely on symptom inputs.
+-> No personal data storage.
+-> Works entirely on symptom inputs.
 
 📱 Responsive Design
 
-Works seamlessly across desktop, tablet, and mobile devices.
+-> Works seamlessly across desktop, tablet, and mobile devices.
 
 🖼️ Project Preview
 
 The platform focuses on:
 
-Personalized Medicine
+-> Personalized Medicine
+-> Medical Chatbot Interaction
 
-Medical Chatbot Interaction
-
-Medical Forecasting
+-> Medical Forecasting
 
 “This tool does not replace doctors but helps users understand possible conditions early.”
 
-🛠️ Tech Stack
-Frontend
+🛠️ Tech Stack:-
 
-HTML5
+FRONTEND:-
 
-CSS3 (Modern UI with animations)
+-> HTML5
+-> CSS3 (Modern UI with animations)
+-> JavaScript (Vanilla JS)
 
-JavaScript (Vanilla JS)
+BACKEND:-
 
-Font Awesome Icons
-
-Google Fonts (Outfit)
-
-Backend
-
-Python
-
-Flask
-
-Machine Learning Model
-
-REST API
-
-Dataset
+-> Python
+-> Flask
+-> Machine Learning Model
+-> REST API
+-> Dataset
 
 Symptom–Disease dataset (CSV based medical data)
 
@@ -93,17 +80,14 @@ final-project-MEDIMATE-
 
 🚀 How It Works
 
-User selects symptoms from the dropdown list.
-
-Selected symptoms are sent to the backend via REST API.
-
-Machine Learning model analyzes symptom patterns.
-
-Possible diseases are returned with probability scores.
-
-Results are displayed on the UI with a disclaimer.
+1. User selects symptoms from the dropdown list.
+2. Selected symptoms are sent to the backend via REST API.
+3. Machine Learning model analyzes symptom patterns.
+4. Possible diseases are returned with probability scores.
+5. Results are displayed on the UI with a disclaimer.
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the Repository
 git clone https://github.com/KunalMuk2205/final-project-MEDIMATE-.git
 cd final-project-MEDIMATE-
@@ -152,20 +136,15 @@ Request Body (JSON):
 
 🎓 Academic Relevance
 
-Final Year Project
+  Demonstrates:
 
-Demonstrates:
-
-Machine Learning
-
-REST APIs
-
-Frontend–Backend Integration
-
-Healthcare Applications
+-> Machine Learning
+-> REST APIs
+-> Frontend–Backend Integration
+-> Healthcare Applications
 
 🤝 Contributors
 
-Kunal Mukherjee
+Kunal Mukherjee 
 📌 Computer Science Student
-📌 Passionate about AI, ML & Healthcare Tech
+
